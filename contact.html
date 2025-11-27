@@ -3,81 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact</title>
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4fff4;
-            margin: 0;
-            padding: 0;
-        }
+     
+      /* ------ GLOBAL RESET / LAYOUT ------ */
+html, body {
+    height: 100%;
+    margin: 0;
+}
 
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 30px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #0a0a0a;      /* Dark Bold Theme */
+    font-family: 'Poppins', sans-serif;
+    color: #e6e6e6;
+}
 
-        h1 {
-            color: #2e7d32;
-            text-align: center;
-        }
+.content {
+    flex: 1;
+}
 
-        p, li {
-            font-size: 18px;
-            color: #444;
-            line-height: 1.6;
-        }
-        
+/* ------ NAVIGATION ------ */
 nav {
-    background-color: #e8f5e9;
-    padding: 15px 0;
+    background: #111;
+    padding: 18px 0;
     text-align: center;
-    border-bottom: 2px solid #4CAF50;
+    border-bottom: 2px solid #00e5ff;
+    box-shadow: 0 3px 10px rgba(0, 229, 255, 0.3);
 }
 
 nav a {
-    color: #2e7d32;
+    color: #00e5ff;
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 22px;
     font-size: 20px;
-    font-weight: bold;
-    padding: 8px 15px;
-    border-radius: 5px;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: 0.3s ease;
 }
 
 nav a:hover {
-    color: white;
-    background-color: #4CAF50;
+    background: #00e5ff;
+    color: #000;
+    transform: translateY(-2px);
 }
 
 nav a.active {
-    background-color: #4CAF50;
-    color: white;
+    background: #00e5ff;
+    color: #000;
 }
-</style>
+
+/* ------ CONTAINER ------ */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 40px;
+    background: linear-gradient(145deg, #111, #1a1a1a);
+    border-radius: 14px;
+    box-shadow: 0 6px 25px rgba(0, 229, 255, 0.15),
+                0 0 18px rgba(0, 229, 255, 0.2);
+    animation: fadeUp 0.6s ease;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ------ HEADINGS ------ */
+h1 {
+    color: #00e5ff;
+    font-size: 42px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: #00bcd4;
+    margin-top: 30px;
+    font-size: 26px;
+    border-left: 4px solid #00e5ff;
+    padding-left: 10px;
+}
+
+/* ------ TEXT ------ */
+p, li {
+    color: #dcdcdc;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* ------ PROFILE IMAGE ------ */
+.profile-image {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 4px solid #00e5ff;
+    display: block;
+    margin: 20px auto;
+    transition: 0.3s ease-in-out;
+}
+
+.profile-image:hover {
+    transform: scale(1.06) rotate(1deg);
+    box-shadow: 0 0 18px #00e5ff;
+}
+
+/* ------ BUTTONS ------ */
+.round-btn {
+    background: #00e5ff;
+    color: #000;
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.round-btn:hover {
+    background: #00bcd4;
+    transform: translateY(-3px);
+}
+
+/* ------ SECTION BOXES (About Page) ------ */
+.section-box {
+    background: #151515;
+    border-left: 4px solid #00e5ff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 229, 255, 0.15);
+}
+
+/* ------ FOOTER ------ */
+footer {
+    background: #111;
+    color: #00e5ff;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 2px solid #00e5ff;
+    margin-top: 40px;
+    box-shadow: 0 -3px 10px rgba(0, 229, 255, 0.3);
+}
+
+/* ------ RESPONSIVE ------ */
+@media (max-width: 900px) {
+    .container {
+        padding: 25px;
+    }
+
+    h1 { font-size: 34px; }
+    h2 { font-size: 22px; }
+
+    nav a {
+        display: inline-block;
+        margin: 10px;
+    }
+
+    .profile-image {
+        width: 180px;
+        height: 180px;
+    }
+}
 
     </style>
 </head>
+
 <body>
-    <nav>
+
+<nav>
     <a href="index.html">Home</a>
     <a href="aboutme.html">About Me</a>
     <a href="contact.html" class="active">Contact</a>
     <a href="location.html">Location</a>
 </nav>
 
-
-<div class="container">
-    <h1>Contact Information</h1>
-
-    <p><strong>Email:</strong> alishahzafr268@gmail.com</p>
-    <p><strong>Phone:</strong> 03195438056</p>
-    <p><strong>LinkedIn:</strong> linkedin.com/in/alishah-zafar</p>
-    <p><strong>Instagram:</strong> alishahh_007</p>
+<div class="content">
+    <div class="container">
+        <h1>Contact Information</h1>
+        <p><strong>Email:</strong> alishahzafr268@gmail.com</p>
+        <p><strong>Phone:</strong> 03195438056</p>
+        <p><strong>LinkedIn:</strong> linkedin.com/in/alishah-zafar</p>
+        <p><strong>Instagram:</strong> alishahh_007</p>
+    </div>
 </div>
+
+<footer>
+    © 2025 Alishah Zafar — Portfolio Website
+</footer>
 
 </body>
 </html>
