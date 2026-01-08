@@ -68,7 +68,7 @@ I am currently focused on improving my skills in *C++, **HTML/CSS, and **GitHub 
 ---
 
 ## Connect with Me
-- GitHub: [https://github.com/your-username](https://github.com/alishah-zafar)  
+- GitHub: (https://github.com/alishah-zafar)  
 - Email: alishahzafr268@gmail.com
 
 ---
